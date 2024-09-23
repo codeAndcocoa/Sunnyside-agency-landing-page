@@ -1,0 +1,442 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap");
+/* font-family: "Barlow", sans-serif;
+
+font-family: "Fraunces", serif; */
+
+/* Colors */
+
+:root {
+  --primary1: hsl(7, 99%, 70%); /* Soft red */
+  --primary2: hsl(51, 100%, 49%); /* Yellow */
+  --primary3: hsl(
+    167,
+    40%,
+    24%
+  ); /* Dark desaturated cyan (graphic design text) */
+  --primary4: hsl(198, 62%, 26%); /* Dark blue (photography text)  */
+  --primary5: hsl(168, 34%, 41%); /* Dark moderate cyan (footer) */
+
+  --neutral1: hsl(212, 27%, 19%); /* Very dark desaturated blue */
+  --neutral2: hsl(213, 9%, 39%); /* Very dark grayish blue  */
+  --neutral3: hsl(232, 10%, 55%); /* Dark grayish blue  */
+  --neutral4: hsl(210, 4%, 67%); /* Grayish blue  */
+  --neutral5: hsl(0, 0%, 100%); /* White  */
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header and Navigation */
+header {
+  height: 90vh;
+  background-image: url(./images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav-item a,
+.nav-item a:hover,
+.nav-item a:focus {
+  text-decoration: none;
+  color: var(--neutral5);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.6rem 2rem;
+  font-size: 1.1em;
+}
+
+#navigation .nav-item:last-child a {
+  color: var(--neutral1);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  background-color: var(--neutral5);
+  border-radius: 50px;
+  padding: 0.6rem 2rem;
+}
+
+#navigation .nav-item:last-child a:hover {
+  color: var(--neutral5);
+  background-color: hsl(0, 0%, 100%, 0.5);
+}
+
+header h1 {
+  color: var(--neutral5);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  margin-top: 3rem;
+}
+header .arrow {
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5rem;
+}
+
+/* Graphics Grid */
+
+.col-lg-6 {
+  padding: 1rem;
+  height: 65vh;
+}
+.egg-img {
+  background-image: url(./images/desktop/image-transform.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.goblet-img {
+  background-image: url(./images/desktop/image-stand-out.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cherry {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.orange {
+  background-image: url(./images/desktop/image-photography.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.text {
+  margin: 5rem auto;
+  vertical-align: middle;
+  width: 85%;
+}
+.text h2 {
+  color: var(--neutral1);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 3em;
+  margin-bottom: 2rem;
+}
+.text p {
+  color: var(--neutral4);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+}
+.text a,
+.text a:hover,
+.text a:focus {
+  text-decoration: none;
+  color: var(--neutral1);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  position: relative;
+  z-index: 1;
+}
+.text a:hover:after {
+  content: "";
+  position: absolute;
+  background-color: hsl(51, 100%, 49%, 0.3);
+  width: 108%;
+  height: 0.5rem;
+  bottom: 0;
+  left: -0.3rem;
+  border-radius: 15px;
+  z-index: -1;
+}
+.text .goblet-link:hover::after {
+  background-color: hsl(7, 99%, 70%, 0.3);
+}
+.orange-text,
+.cherry-text {
+  bottom: 0;
+  padding: 1.1rem;
+  
+}
+.orange-text h3,
+.cherry-text h3 {
+  font-family: "Fraunces", serif;
+  font-size: 1.8em;
+  font-weight: 900;
+}
+.orange-text p,
+.cherry-text p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 1.2rem;
+  padding: 0.5rem;
+}
+.cherry-text {
+  color: var(--primary3);
+}
+.orange-text {
+  color: var(--primary4);
+}
+/* Testimonials */
+#testimonials h3 {
+  color: var(--neutral3);
+  margin-top: 6rem;
+}
+.clients {
+  width: 90%;
+  margin: auto;
+}
+.testimonial {
+  padding: 1.5rem;
+}
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 2rem;
+}
+
+.testimonial p {
+  color: var(--neutral3);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.details span {
+  display: block;
+  font-size: 0.9em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+.details span:first-child {
+  color: var(--neutral1);
+}
+.details span:last-child {
+  color: var(--neutral4);
+}
+
+/* Photos */
+.photos {
+  margin-top: 4rem;
+}
+.col-6 {
+  height: 50vh;
+}
+.photo1 {
+  background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo2 {
+  background-image: url(./images/desktop/image-gallery-orange.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo3 {
+  background-image: url(./images/desktop/image-gallery-cone.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo4 {
+  background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Footer */
+footer {
+    min-height: 50vh;
+  background-color: hsl(168, 34%, 70%);
+  padding: 4rem;
+}
+
+.logo-link h3 {
+  color: var(--primary4);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.navlinks a,
+.navlinks:focus {
+  color: var(--primary4);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+.navlinks a:hover {
+  color: var(--neutral5);
+}
+.icon {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.icon i{
+  color: var(--primary4);
+  font-size: 1.2em;
+}
+
+ .icon i:hover {
+   color: var(--neutral5);
+} 
+/* Media queries */
+@media screen and (max-width:1024px){
+  .col-lg-6{
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  header .arrow {
+    margin-top: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-image: url(./images/mobile/image-header.jpg);
+    height: 70vh;
+    background-position-y: 80%;
+  
+  }
+  header h1 {
+    margin-top: 3rem;
+    letter-spacing: 3px;
+   
+  }
+  header .arrow {
+    margin-top: 4rem;
+   position: absolute;
+  
+   
+  }
+  .navbar-collapse {
+    background-color: var(--neutral5);
+    margin-top: 3.5rem;
+    position: absolute;
+    
+  }
+  .navbar-collapse::after {
+    content: "";
+    position: absolute;
+    background-color: var(--neutral5);
+    width: 60px;
+    height: 60px;
+    right: 0;
+    top: -2.5rem;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+  #navigation a {
+    color: var(--neutral3);
+    width: 13rem;
+    margin: auto;
+  }
+  #navigation .nav-item {
+    padding: 1rem;
+  }
+  #navigation .nav-item:last-child a {
+    background-color: var(--primary2);
+  }
+  .egg-img {
+    background-image: url(./images/mobile/image-transform.jpg);
+    order: 1;
+  }
+  .egg-text {
+    order: 2;
+    text-align: center;
+  }
+  .goblet-img {
+    background-image: url(./images/mobile/image-stand-out.jpg);
+    order: 3;
+  }
+  .goblet-text {
+    order: 4;
+    text-align: center;
+  }
+  .text {
+    margin-top: 2rem;
+  }
+  .text h2 {
+    font-size: 2rem;
+  }
+  .text a {
+    font-size: 1rem;
+  }
+  .cherry {
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+    background-position-y: 0%;
+    order: 5;
+  }
+  .orange {
+    background-image: url(./images/mobile/image-photography.jpg);
+    background-position-y: 6%;
+    order: 6;
+  }
+  .col-6 {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 80vh;
+    background-position-y: 95%;
+  }
+  header h1 {
+    margin-top: 2rem;
+  }
+  header .arrow {
+    margin-top: 3rem;
+  }
+
+  .col-lg-6 {
+    height: 70vh;
+  }
+  .text {
+    width: 90%;
+  }
+  .col-6 {
+    height: 30vh;
+  }
+  .photo1 {
+    background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+  
+  }
+  .photo2 {
+    background-image: url(./images/mobile/image-gallery-orange.jpg);
+    
+  }
+  .photo3 {
+    background-image: url(./images/mobile/image-gallery-cone.jpg);
+  
+  }
+  .photo4 {
+    background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+   
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .arrow {
+    margin-top: 0.5rem;
+  }
+  .col-6 {
+    height: 25vh;
+  }
+}
+
+@media screen and (min-width:1920px){
+  .navbar{
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+  }
+}
